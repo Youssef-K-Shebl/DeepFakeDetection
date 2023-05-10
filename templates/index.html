@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Detection</title>
+    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+          integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-color-primary text-color-white tracking-wider">
+<header class="sticky top-0 z-50">
+    <nav class="container flex justify-between items-center">
+        <div class="py-5 text-color-secondary font-bold text-3xl">
+            <a href="/">
+                <span class="text-color-white">Fake</span>Wave.
+            </a>
+        </div>
+        <div>
+            <ul class=" hidden lg:flex items-center space-x-6">
+                <li><a href="#home" class="hover:text-color-secondary ease-in duration-200">Home</a></li>
+                <li><a href="#About-us" class="hover:text-color-secondary ease-in duration-200">About </a></li>
+                <li><a href="#why-us" class="hover:text-color-secondary ease-in duration-200">Why Us</a></li>
+                <li><a href="#our-team" class="hover:text-color-secondary ease-in duration-200">Our Team</a></li>
+                <li><a href="#contact-us" class="hover:text-color-secondary ease-in duration-200">Contact </a></li>
+                <li><a href="/upload"><button class="bg-color-secondary px-5 py-2 rounded-md capitalize  hover:opacity-80 ease-in duration-200">GET START</button></a></li>
+            </ul>
+        </div>
+
+        <!-- Mobile screen  -->
+        <div id="hamburger" class="lg:hidden cursor-pointer z-50">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <div id="menu" class="hidden bg-color-primary-dark h-[100vh] absolute inset-0">
+            <ul class="h-full grid place-items-center py-20">
+                <li><a id="hLink" href="#home" class="hover:text-color-secondary ease-in duration-200">Home</a></li>
+                <li><a id="hLink" href="#About-us" class="hover:text-color-secondary ease-in duration-200">About</a></li>
+                <li><a id="hLink" href="#why-us" class="hover:text-color-secondary ease-in duration-200">Why Us</a></li>
+                <li><a id="hLink" href="#our-team" class="hover:text-color-secondary ease-in duration-200">Our Team</a></li>
+                <li><a id="hLink" href="#contact-us" class="hover:text-color-secondary ease-in duration-200">Contact</a></li>
+                <li><a href="/upload">
+                        <button class="btn">GET START</button>
+                    </a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<main>
+
+    <section id="home" class="relative">
+        <div class="blob1"></div>
+        <div class="blob2"></div>
+        <div class="container  py-20">
+            <div class="flex flex-col items-center z-20 md:flex-row ">
+                <div class=" homeAnimation text-center mb-12 md:text-left md:w-1/2 md:pr-10 user-text active-text ">
+                    <h1 class="title home-title ">Fake </h1>
+                    <h1 class="title home-title mb-4 text-gradient ">Detection.</h1>
+                    <p class="leading-relaxed mb-10">Lets detect manipulated videos and reveal fakeness.</p>
+                    <a href="#About-us">
+                        <button class="btn">learn More</button>
+                    </a>
+                </div>
+                <div class="md:w-1/2 hero-pic  animation">
+                    <img src="static/img/ai.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section id="About-us" class="relative">
+        <div class="blob1"></div>
+        <div class="blob2"></div>
+        <div class="container py-20 responsive-container-about ">
+            <div style="padding-left: 400px">
+                <div class="about-pic m-auto mb-4 md:w-1/2">
+                    <img src="static/img/about2.JPG" alt="">
+                </div>
+                <div class="about-pic m-auto mb-4 md:w-1/2">
+                    <img src="static/img/about3.PNG" alt="">
+                </div>
+            </div>
+            <div class="about-section ">
+                <div class="about-card ">
+                    <div class="about-circle"></div>
+                    <div class="about-circle"></div>
+                    <div class="about-card-inner">
+                        <p class="mb-6 about-title"><i>About Our Website:</i></p>
+                        <p class="about-box-text">We live in an era where anyone can swap their faces with leading actors in
+                            famous movies like the Star Wars sequels using deepfake technology. These deepfake videos or faces can
+                            even be done on your mobile phones. Deepfakes provide
+                            information that sounds right but Is not truthful, which can lead beople to acquirefalse beliefs. <br>
+                            Our goal is to ensure youa clear view of truth and detect deep fake of videos.<br> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="why-us" class="relative">
+        <div class="blob1"></div>
+        <div class="blob2"></div>
+        <div class="container py-20">
+            <div class="text-center m-auto mb-4 md:w-1/2">
+                <h1 class="title-section mb-4">Why Us?</h1>
+            </div>
+            <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-12 lg:gap-8 px-4 sm:px-6 lg:px-8 text-center py-5">
+                <!-- card no 1 -->
+                <div class="py-20  ">
+                    <div class="bg-color-secondary inline-block  py-5 px-6 text-center   cursor-pointer circle">
+                        <i class="fa-solid  fa-regular fa-earth-africa text-4xl "></i>
+                    </div>
+                    <h3 class="text-xl redun-color font-bold py-4">| Online and Free</h3>
+                    <p class="leading-relaxed">No need to download or<br> your credit card details.</p>
+                </div>
+
+                <!-- card no 2 -->
+                <div class="py-20 ">
+                    <div class="bg-color-secondary inline-block  py-5 px-6 text-center  cursor-pointer circle">
+                        <i class="fa-solid fa-lock text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl redun-color font-bold py-4">| Safe and Secure</h3>
+                    <p class="leading-relaxed">Your data is saffe with us, <br> it will deleted after you see the result.</p>
+                </div>
+
+                <!-- card no 3 -->
+                <div class="py-20 ">
+                    <div class=" bg-color-secondary inline-block  py-5 px-6 text-center cursor-pointer circle">
+                        <i class=" fa-solid fa-duotone fa-check-double text-4xl "></i>
+
+                    </div>
+                    <h3 class="text-xl redun-color font-bold py-4">| High Accuracy</h3>
+                    <p class="leading-relaxed">The result is fast and accurate.</p>
+                </div>
+            </div>
+        </div>
+              
+    </section>
+
+
+    <section id="what we can detect" class="relative">
+        <div class="blob1"></div>
+        <div class="blob2"></div>
+        <div class="container  py-20">
+            <div class="text-center m-auto mb-20 md:w-1/2">
+                <h1 class="title-section-detect mb-4">What we can detect?</h1>
+            </div>
+
+            <div style="padding-bottom: 200px;" class="detect-part">
+                <q class="detect-part-text text-center">
+                    <p class="text-blk section-head-text">
+                        Face swap
+                    </p>
+                    its a techniques where a target victims face is either swapped onto the attackers head movement and also
+                    used to generate thousand of fake persons our model is trained to detect these type of manipulations.
+                </q>
+                <img src="static/img/face-swap.jpeg" class="pic-face-swap" alt="">
+            </div>
+
+
+            <div style="padding-bottom: 200px;" class="detect-part">
+                <img style="float: left;" src="static/img/gan.jpg" class="pic-face-swap" alt="">
+                <q style="margin-left: 5%;" class="detect-part-text text-center">
+                    <p class="text-blk section-head-text">
+                        GAN
+                    </p>
+                    its a network used for face manipulation that modifies a victims facial attributes e.g changing age or hair
+                    color our detector trained on generated videos found online to detect the fake.
+                </q>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section id="our-team" class="relative">
+        <div class="blob1"></div>
+        <div class="blob2"></div>
+        <div class="container  py-20">
+            <div class="text-center m-auto mb-12 md:w-1/2">
+                <h1 class="title-section mb-4">Meet Our Team</h1>
+            </div>
+            <div class="responsive-container-block">
+                <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+                    <div class="team-card">
+                        <div class="img-wrapper">
+                            <img class="team-img" src="static/img/user3.jpg">
+                        </div>
+                        <p class="text-blk name">
+                            Moaz Fouad
+                        </p>
+                        <p class="text-blk position">
+                            leader
+                        </p>
+                        <div class="social-media-links">
+                            <a href="http://www.twitter.com/" target="_blank">
+                                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+                            </a>
+                            <a href="http://www.facebook.com/" target="_blank">
+                                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg">
+                            </a>
+                            <a href="http://www.instagram.com/" target="_blank">
+                                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+                            </a>
+                            <a href="http://www.gmail.com/" target="_blank">
+                                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+                    <div class="team-card">
+                        <div class="img-wrapper">
+                            <img class="team-img" src="static/img/user3.jpg">
+                        </div>
+                        <p class="text-blk name">
+                            Murad Hany
+                        </p>
+                        <p class="text-blk position">
+                            leader
+                        </p>
+                        <div class="social-media-links">
+                            <a href="http://www.twitter.com/" target="_blank">
+                                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+                            </a>
+                            <a href="http://www.facebook.com/" target="_blank">
+                                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg">
+                            </a>
+                            <a href="http://www.instagram.com/" target="_blank">
+                                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+                            </a>
+                            <a href="http://www.gmail.com/" target="_blank">
+                                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+                    <div class="team-card">
+                        <div class="img-wrapper">
+                            <img class="team-img" src="static/img/user3.jpg">
+                        </div>
+                        <p class="text-blk name">
+                            Youssef Kamel
+                        </p>
+                        <p class="text-blk position">
+                            Backend developer
+                        </p>
+                        <div class="social-media-links">
+                            <a href="http://www.twitter.com/" target="_blank">
+                                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+                            </a>
+                            <a href="http://www.facebook.com/" target="_blank">
+                                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg">
+                            </a>
+                            <a href="http://www.instagram.com/" target="_blank">
+                                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+                            </a>
+                            <a href="http://www.gmail.com/" target="_blank">
+                                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+                    <div class="team-card">
+                        <div class="img-wrapper">
+                            <img class="team-img" src="static/img/user3.jpg">
+                        </div>
+                        <p class="text-blk name">
+                            Mustafa Mohsen
+                        </p>
+                        <p class="text-blk position">
+                            Backend developer
+                        </p>
+                        <div class="social-media-links">
+                            <a href="http://www.twitter.com/" target="_blank">
+                                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+                            </a>
+                            <a href="http://www.facebook.com/" target="_blank">
+                                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg">
+                            </a>
+                            <a href="http://www.instagram.com/" target="_blank">
+                                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+                            </a>
+                            <a href="http://www.gmail.com/" target="_blank">
+                                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+                    <div class="team-card">
+                        <div class="img-wrapper">
+                            <img class="team-img" src="static/img/user1.jpg">
+                        </div>
+                        <p class="text-blk name">
+                            Nada Ashraf
+                        </p>
+                        <p class="text-blk position">
+                            Frontend developer
+                        </p>
+                        <div class="social-media-links">
+                            <a href="http://www.twitter.com/" target="_blank">
+                                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+                            </a>
+                            <a href="http://www.facebook.com/" target="_blank">
+                                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg">
+                            </a>
+                            <a href="http://www.instagram.com/" target="_blank">
+                                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+                            </a>
+                            <a href="http://www.gmail.com/" target="_blank">
+                                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+                    <div class="team-card">
+                        <div class="img-wrapper">
+                            <img class="team-img" src="static/img/user1.jpg">
+                        </div>
+                        <p class="text-blk name">
+                            Yara Mohamed
+                        </p>
+                        <p class="text-blk position">
+                            Frontend developer
+                        </p>
+                        <div class="social-media-links">
+                            <a href="http://www.twitter.com/" target="_blank">
+                                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+                            </a>
+                            <a href="http://www.facebook.com/" target="_blank">
+                                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg">
+                            </a>
+                            <a href="http://www.instagram.com/" target="_blank">
+                                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+                            </a>
+                            <a href="http://www.gmail.com/" target="_blank">
+                                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="contact-us" class="contact">
+        <div class="contact-container">
+            <form action="https://formsubmit.co/prakashravichandran2530@gmail.com" method="POST" class="contact__form">
+                <img src="static/img/contact.svg" height="50px" width="50px">
+                <h2 style="padding-left: 20%;" class="contact-title">Contact Us</h2>
+
+                <input type="hidden" name="_autoresponse"
+                       value="PrakashDev | Olá, fiquei muito feliz ao receber a sua mensagem! Obrigado por reconhecer o meu trabalho, em breve estarei entrando em contact com você, abraços. ;)">
+
+                <div class="contact-input-text">
+                    <input type="text" name="name" id="name" class="contact-form-part" data-campo="nome" required>
+                    <label for="name" class="contact-form-label" data-label="nome">Name</label>
+                </div>
+                <div class="contact-input-text">
+                    <input type="text" id="email" name="email" class="contact-form-part" data-campo="email" required>
+                    <label for="email" class="contact-form-label" data-label="email">E-mail</label>
+                </div>
+                <div class="contact-input-text textarea">
+            <textarea id="message" name="message" class="contact-form-part" data-campo="mensagem" required
+                      maxlength="280"></textarea>
+                    <label for="message" class="contact-form-label" data-label="mensagem">Message</label>
+                </div>
+                <button
+                        class="bg-color-secondary px-9 py-2 rounded-md capitalize  hover:opacity-80 ease-in duration-200">submit</button>
+            </form>
+
+            <div style="padding-left: 150px;" class="contact-text">
+                <h3 class="subcontact-title ">Let's chat?</h3>
+                <p class="subcontact-text"> If you have any problem, don't hesitate to contact us, we are there for you and we
+                    will help you, just write your problem here or send us an email or on social media.</p>
+                <ul class="contact-icons">
+                    <li class="contact-icon">
+                        <a href="https://www.linkedin.com/" title="Linkedin" target="_blank"><img
+                                    src="https://img.icons8.com/nolan/40/2AF598/009EFD/linkedin.png" /></a>
+                    </li>
+                    <li class="contact-icon">
+                        <a href="http://www.instagram.com/" title="Instagram" target="_blank"><img
+                                    src="https://img.icons8.com/nolan/40/2AF598/009EFD/instagram-new.png" /></a>
+                    </li>
+                    <li class="contact-icon">
+                        <a href="http://www.facebook.com/" title="facebook" target="_blank"><img
+                                    src="https://img.icons8.com/nolan/40/2AF598/009EFD/facebook.png" /></a>
+                    </li>
+                    <li class="contact-icon">
+                        <a href="http://www.gmail.com/" title="E-mail" target="_blank"><img
+                                    src="https://img.icons8.com/nolan/40/2AF598/009EFD/gmail.png" /></a>
+                    </li>
+                </ul>
+
+                <img class="contact-pic animation " src="static/img/ai.png" alt="">
+            </div>
+        </div>
+    </section>
+
+
+    <section id="footer">
+        <div class="bg-color-primary-dark relative">
+            <div class="container py-10">
+                <div class="flex justify-center pt-10 border-t border-color-gray">
+                    <p>2023 &copy; LightCode. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<script src="static/js/main.js"></script>
+
+</body>
+
+</html>

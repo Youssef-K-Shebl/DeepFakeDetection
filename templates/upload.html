@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detect vidoes</title>
+    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+          integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <style>
+        @-webkit-keyframes honeycomb {
+            0%,
+            20%,
+            80%,
+            100% {
+                opacity: 0;
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+
+            30%,
+            70% {
+                opacity: 1;
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+        }
+
+        @keyframes honeycomb {
+            0%,
+            20%,
+            80%,
+            100% {
+                opacity: 0;
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+
+            30%,
+            70% {
+                opacity: 1;
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+        }
+
+        .honeycomb {
+            height: 24px;
+            position: relative;
+            width: 24px;
+        }
+
+        .honeycomb div {
+            -webkit-animation: honeycomb 2.1s infinite backwards;
+            animation: honeycomb 2.1s infinite backwards;
+            background: #f3f3f3;
+            height: 12px;
+            margin-top: 6px;
+            position: absolute;
+            width: 24px;
+        }
+
+        .honeycomb div:after, .honeycomb div:before {
+            content: '';
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            position: absolute;
+            left: 0;
+            right: 0;
+        }
+
+        .honeycomb div:after {
+            top: -5px;
+            border-bottom: 6px solid #f3f3f3;
+        }
+
+        .honeycomb div:before {
+            bottom: -5px;
+            border-top: 6px solid #f3f3f3;
+        }
+
+        .honeycomb div:nth-child(1) {
+            -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+            left: -28px;
+            top: 0;
+        }
+
+        .honeycomb div:nth-child(2) {
+            -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s;
+            left: -14px;
+            top: 22px;
+        }
+
+        .honeycomb div:nth-child(3) {
+            -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+            left: 14px;
+            top: 22px;
+        }
+
+        .honeycomb div:nth-child(4) {
+            -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+            left: 28px;
+            top: 0;
+        }
+
+        .honeycomb div:nth-child(5) {
+            -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
+            left: 14px;
+            top: -22px;
+        }
+
+        .honeycomb div:nth-child(6) {
+            -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+            left: -14px;
+            top: -22px;
+        }
+
+        .honeycomb div:nth-child(7) {
+            -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s;
+            left: 0;
+            top: 0;
+        }
+
+        .loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 4;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: black;
+            z-index: 3;
+            opacity: .5;
+        }
+
+
+
+    </style>
+</head>
+
+<body class="bg-color-primary text-color-white tracking-wider">
+<div class="overlay" id="overlay" style="display: none"></div>
+<div class="loader" style="display: none" id="loader">
+    <div class="honeycomb">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+<header class="sticky top-0 z-50" style="z-index: 2">
+    <nav class="container flex justify-between items-center">
+        <div class="py-5 text-color-secondary font-bold text-3xl">
+            <a href="/">
+                <span class="text-color-white">Fake</span>Wave.
+            </a>
+        </div>
+        <div>
+            <ul class="hidden lg:flex items-center space-x-6">
+                <li><a href="/#home" class="hover:text-color-secondary ease-in duration-200">Home</a></li>
+                <li><a href="/#About-us"
+                       class="hover:text-color-secondary ease-in duration-200">About </a>
+                </li>
+                <li><a href="/#why-us" class="hover:text-color-secondary ease-in duration-200">Why
+                    Us</a>
+                </li>
+                <li><a href="/#our-team" class="hover:text-color-secondary ease-in duration-200">Our
+                    Team</a></li>
+                <li><a href="/#contact-us" class="hover:text-color-secondary ease-in duration-200">Contact
+                </a></li>
+                <li><a href="/upload">
+                    <button
+                            class="bg-color-secondary px-5 py-2 rounded-md capitalize  hover:opacity-80 ease-in duration-200">
+                        GET
+                        START
+                    </button>
+                </a></li>
+            </ul>
+        </div>
+
+        <!-- Mobile screen  -->
+        <div id="hamburger" class="lg:hidden cursor-pointer z-50">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <div id="menu" class="hidden bg-color-primary-dark h-[100vh] absolute inset-0">
+            <ul class="h-full grid place-items-center py-20">
+                <li><a id="hLink" href="/#home" class="hover:text-color-secondary ease-in duration-200">Home</a></li>
+                <li><a id="hLink" href="/#About-us" class="hover:text-color-secondary ease-in duration-200">About</a>
+                </li>
+                <li><a id="hLink" href="/#why-us" class="hover:text-color-secondary ease-in duration-200">Why Us</a></li>
+                <li><a id="hLink" href="#/our-team" class="hover:text-color-secondary ease-in duration-200">Our Team</a>
+                </li>
+                <li><a id="hLink" href="/#contact-us" class="hover:text-color-secondary ease-in duration-200">Contact</a>
+                </li>
+                <li><a href="/upload">
+                    <button class="btn">GET START</button>
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<main>
+
+    <section id="home" class="relative ">
+
+        <div class=" demo">
+            <div class="content">
+                <div id="large-header" class="large-header">
+
+                    <!-- <h1 class="main-title"><span class="thin">Explore</span> Space</h1> -->
+
+                    <!-- <div class="blob1"></div>
+        <div class="blob2"></div> -->
+                    <div class="container py-20">
+                        <div class="container  flex flex-col items-center z-20 md:flex-row  ">
+                            <form action="/upload" method="POST" enctype="multipart/form-data">
+                                <div class=" text-center mb-12 md:text-left md:w-1/2 md:pr-10 user-text active-text ">
+                                    <input class="text-center videoupload" type='file' id='videoUpload' name="video"/>
+                                    {% if result is defined and result.error is defined %}
+                                    <div class="alert alert-danger">
+                                        <ul>
+                                            <li style="color: red; font-size: 15px">{{ result.error }}</li>
+                                        </ul>
+                                    </div>
+                                    {% endif %}
+                                    <video width="420rem" height="300rem" controls>
+
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <div style="margin-top: 6%;">
+
+                                        <button id="result" style="  margin-right: 200px;"
+                                                class="btn items-center  login-button"
+                                                value="">see
+                                            result
+                                        </button>
+
+
+                                    </div>
+
+
+                                </div>
+                            </form>
+
+                        </div>
+                        {% if result is defined and result is not none %}
+                        <div class="container py-20 " id="res">
+                            <div class="flex flex-col items-center z-20 md:flex-row ">
+                                {% if result.class != 2 %}
+                                <div
+                                        class=" upload-center text-center mb-12 md:text-left md:w-1/2 md:pr-10 user-text active-text ">
+
+                                    <img id="resImg" alt="Girl in a jacket" width="100%" height="100%"
+                                         src="static/img/2.png">
+
+                                </div>
+
+                                <br>
+
+                                <div class="upload-center" id="fake">
+                                    <p style="font-size: 30px;">
+                                        {% if result.class %}
+                                        Real
+                                        {% else %}
+                                        Fake
+                                        {% endif %}
+                                        <i class="fas fa-thumbs-down" style="font-size: 20px;"></i>
+                                    </p>                                    <label
+                                        style="font-size: 30px;">Accuracy</label>
+                                    <input class="result" type="text" readonly="readonly"
+                                           value="{{ result.confidence }}">
+
+
+                                </div>
+                                {% else %}
+
+                                <div
+                                        class=" upload-center text-center mb-12 md:text-left md:w-1/2 md:pr-10 user-text active-text ">
+
+                                    <img id="" alt="Girl in a jacket" width="100%" height="100%"
+                                         src="static/img/ext.jpg">
+
+                                </div>
+
+                                <br>
+
+                                <div class="upload-center" id="not-found">
+                                    <p style="font-size: 30px;">
+                                        No faces found, try again with another video
+                                        <i class="fas fa-thumbs-down" style="font-size: 20px;"></i>
+                                    </p>
+
+
+                                </div>
+
+                                {% endif %}
+
+                            </div>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</main>
+
+<script src="static/js/main.js">
+
+
+</script>
+
+</body>
+
+</html>
