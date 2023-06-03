@@ -150,6 +150,7 @@
 
 
 
+
     </style>
 </head>
 
@@ -206,10 +207,12 @@
                 <li><a id="hLink" href="/#home" class="hover:text-color-secondary ease-in duration-200">Home</a></li>
                 <li><a id="hLink" href="/#About-us" class="hover:text-color-secondary ease-in duration-200">About</a>
                 </li>
-                <li><a id="hLink" href="/#why-us" class="hover:text-color-secondary ease-in duration-200">Why Us</a></li>
+                <li><a id="hLink" href="/#why-us" class="hover:text-color-secondary ease-in duration-200">Why Us</a>
+                </li>
                 <li><a id="hLink" href="#/our-team" class="hover:text-color-secondary ease-in duration-200">Our Team</a>
                 </li>
-                <li><a id="hLink" href="/#contact-us" class="hover:text-color-secondary ease-in duration-200">Contact</a>
+                <li><a id="hLink" href="/#contact-us"
+                       class="hover:text-color-secondary ease-in duration-200">Contact</a>
                 </li>
                 <li><a href="/upload">
                     <button class="btn">GET START</button>
@@ -242,16 +245,15 @@
                                         </ul>
                                     </div>
                                     {% endif %}
-                                    <video width="420rem" height="300rem" controls>
+                                    <video width="570rem" height="450rem" controls>
 
                                         Your browser does not support the video tag.
                                     </video>
                                     <div style="margin-top: 6%;">
 
                                         <button id="result" style="  margin-right: 200px;"
-                                                class="btn items-center  login-button"
-                                                value="">see
-                                            result
+                                                class="btn items-center  login-button" value="">
+                                            see result
                                         </button>
 
 
@@ -266,35 +268,32 @@
                         <div class="container py-20 " id="res">
                             <div class="flex flex-col items-center z-20 md:flex-row ">
                                 {% if result.class != 2 %}
-                                <div
-                                        class=" upload-center text-center mb-12 md:text-left md:w-1/2 md:pr-10 user-text active-text ">
-
+                                <div class=" upload-center text-center mb-12 md:text-left md:w-1/2 md:pr-10 user-text active-text ">
                                     <img id="resImg" alt="Girl in a jacket" width="100%" height="100%"
                                          src="static/img/2.png">
-
                                 </div>
 
                                 <br>
 
                                 <div class="upload-center" id="fake">
-                                    <p style="font-size: 30px;">
+                                    <p style="font-size: 50px; font-weight:bold">
                                         {% if result.class %}
                                         Real
+                                        <i class="fas fa-thumbs-up" style="font-size: 35px;"></i>
                                         {% else %}
                                         Fake
+                                        <i class="fas fa-thumbs-down" style="font-size: 35px;"></i>
                                         {% endif %}
-                                        <i class="fas fa-thumbs-down" style="font-size: 20px;"></i>
-                                    </p>                                    <label
-                                        style="font-size: 30px;">Accuracy</label>
-                                    <input class="result" type="text" readonly="readonly"
-                                           value="{{ result.confidence }}">
 
-
+                                    </p>
+                                    <div class="result-box">
+                                        <label style="font-size: 40px;">Accuracy</label>
+                                        <p class="result">{{ result.confidence }}%</p>
+                                    </div>
                                 </div>
                                 {% else %}
 
-                                <div
-                                        class=" upload-center text-center mb-12 md:text-left md:w-1/2 md:pr-10 user-text active-text ">
+                                <div class=" upload-center text-center mb-12 md:text-left md:w-1/2 md:pr-10 user-text active-text ">
 
                                     <img id="" alt="Girl in a jacket" width="100%" height="100%"
                                          src="static/img/ext.jpg">
